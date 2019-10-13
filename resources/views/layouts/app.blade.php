@@ -8,11 +8,7 @@
 </head>
 <body>
   @yield('content')
-  @section('sidebar')
-    <div class="sidebar">
-      <h3>Sidebar</h3>
-      サイドバー
-  @show
-    </div>
+  <!-- @includeはsidebarの親の@section~@showまでがある -->
+  @include('inc.sidebar')
 </body>
 </html>
