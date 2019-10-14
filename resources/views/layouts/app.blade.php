@@ -23,5 +23,8 @@
       </div>
     </div>
   </div>
+  <footer id="footer" class="text-center">
+    Copyright 2019 &copy; Hiroshi Morita
+  </footer>
 </body>
 </html>
