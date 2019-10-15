@@ -18,4 +18,11 @@ class ContactController extends Controller
 
         return redirect()->route('home')->with('success', 'ありがとうございます。メッセージが送信されました。');
     }
+
+    public function getMessages() {
+        $messages = Message::all();
+
+        return view('messages', ['messages' => $messages]);
+        dd($messages);
+    }
 }
