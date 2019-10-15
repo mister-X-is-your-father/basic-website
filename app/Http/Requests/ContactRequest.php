@@ -36,4 +36,10 @@ class ContactRequest extends FormRequest
             'name.required' => '名前を入力してください'
         ];
     }
+
+    public function attributes() {
+        return [
+            'email' => 'email address'
+        ];
+    }
 }
