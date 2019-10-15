@@ -13,13 +13,9 @@
 
 Route::get('/', 'PagesController@getHome')->name('home');
 
-Route::get('/contact', function() {
-    return view('contact');
-})->name('contact');
+Route::get('/contact', 'PagesController@getContact')->name('contact');
 
-Route::get('/about', function() {
-    return view('about');
-})->name('about');
+Route::get('/about', 'PagesController@getAbout')->name('about');
 
 Route::get('contact/messages', 'ContactController@getMessages')->name('get-messages');
 
