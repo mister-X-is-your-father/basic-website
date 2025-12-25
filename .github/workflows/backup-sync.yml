@@ -122,10 +122,9 @@ jobs:
             chmod 600 "$key_file"
             
             # JWT生成（Pythonを使用）
-            local jwt=$(python3 << 'PYTHON_SCRIPT'
+            local jwt=$(python3 -c "
 import jwt
 import time
-from datetime import datetime, timedelta
 import sys
 
 try:
@@ -143,8 +142,7 @@ try:
     print(token)
 except:
     pass
-PYTHON_SCRIPT
-            "$app_id" 2>/dev/null || echo "")
+" "$app_id" 2>/dev/null || echo "")
             
             if [ -z "$jwt" ]; then
               exit 0
